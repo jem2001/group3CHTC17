@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $1 | tr '[:upper:]' '[:lower:]' | sed 's/[[:punct:]]//g' | sed 's/\t/\n/g' | grep -v "^ *$" | sort 
+cat $1 | tr '[:upper:]' '[:lower:]' | sed 's/[[:punct:]]//g' | sed 's/[[:space:]]\+/\n/g' | grep -v "^ *$" | sort > sorted
