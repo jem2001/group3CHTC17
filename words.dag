@@ -2,19 +2,20 @@
 # the following Directed Acyclic Graph (DAG), below, to run:
 #
 # (pre 1)  prep.sh
-#	       |
-#	       V
+#              |
+#              V
 # (job 1) shakespeareRun.sub
-#	     / | \
+#            / | \
 #  four parallel runs of opp.sh
 #            \ | /
-#	       V
+#              V
 # (post 1) post.sh
 # Note that "job 1" is a HTCondor job submission
 # script that will create several distributed jobs that run in
 # parallel.
-# Run "condor_submit_dag sd.dag" to cause all the code specified in
+# Run "condor_submit_dag words.dag" to cause all the code specified in
 # the DAG to run in the correct order.
+
 
 job 1 shakespeareRun.sub
 
@@ -22,3 +23,4 @@ script pre 1 prep.sh
 script post 1 post.sh
 
 parent 1 child 1
+

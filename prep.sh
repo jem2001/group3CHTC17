@@ -4,3 +4,5 @@ wget "https://pages.stat.wisc.edu/~jgillett/DSCP/CHTC/wordCounting/shakespeare.t
 tar -xf shakespeare.tar
 cat shakespeare/*/* > all.txt
 split -n l/5 all.txt subset
+mkdir log output error
+ls -1 subset* > inputFileList.txt
