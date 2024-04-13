@@ -5,4 +5,4 @@ tar -xf shakespeare.tar
 cat shakespeare/*/* > all.txt
 split -n l/5 all.txt subset
 mkdir log output error
-ls -1 subset* > inputFileList.txt
+ls -1 subset* > inputFileList
