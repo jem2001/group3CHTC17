@@ -2,8 +2,8 @@
 
 export LC_ALL=C
 
-sort -m sorted* > countsOfWords
+sort -m sorted* > merged.txt
 
-uniq -c countsOfWords > countsOfWords
+uniq -c merged.txt > countsMerged.txt
 
-sort -rn countsOfWords > countsOfWords
+sort -rn countsMerged.txt > countsOfWords
